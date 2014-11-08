@@ -81,6 +81,7 @@ margin: 0;
 /* Defining each section background and styles
 * --------------------------------------- */
 .picture{
-	background-image: url(public/ship.jpg);
-	padding: 30% 0 0 0;
+	background-size: cover;
+	background-image: url(ship.jpg);
+	padding: 0 0 0 0;
 }
