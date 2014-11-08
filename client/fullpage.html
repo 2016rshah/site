@@ -1,0 +1,79 @@
+<head>
+    <title>fullpage</title>
+</head>
+
+<body>
+    {{>header}} 
+    {{> pages}}
+</body>
+<template name="pages">
+    <div id="fullpage">
+    	{{>landing}}
+        {{>slide1}} 
+        {{>slide2}} 
+        {{>slide3}}
+    </div>
+</template>
+<template name="header">
+    <div id="header">
+        <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="/">{{greeting}}</a></h1>
+                </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar menu-icon"><a href="javascript:;"><span>Menu</span></a>
+                </li>
+            </ul>
+
+            <section class="top-bar-section">
+                <!-- Left Nav Section -->
+                <ul class="left">
+                    <li><a href="javascript:;">Left Nav Button</a>
+                    </li>
+                </ul>
+				<!-- Right Nav Section -->
+                <ul class="right">
+                    <li class="active"><a href="javascript:;">Right Button Active</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="">Right Button Dropdown</a>
+                        <ul class="dropdown">
+                            <li><a href="javascript:;">First link in dropdown</a>
+                            </li>
+                            <li class="active"><a href="javascript:;">Active link in dropdown</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+</template>
+<template name = "landing">
+		{{#if isMobile}}
+			<div class = "section picture" data-anchor = "landing" id = "landing">
+		    	<h1>Pictures!</h1>
+		    </div>
+		{{else}}
+			<div class = "section" data-anchor = "landing" id = "video-container">
+				<video autoplay loop muted controls="false" id="myVideo">
+					<source src="kite-surfers.mp4" type="video/mp4">
+				</video>
+			</div>
+		{{/if}}
+</template>
+<template name="slide1">
+    <div class="section" id="landing" data-anchor="slide1">
+        <h1>Stuff will go here</h1>
+    </div>
+</template>
+<template name="slide2">
+    <div class="section" data-anchor="slide2">
+        <button>Other stuff here</button>
+    </div>
+</template>
+<template name="slide3">
+    <div class="section" data-anchor="slide3">
+    </div>
+</template>

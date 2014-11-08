@@ -1,0 +1,86 @@
+/* CSS declarations go here */
+
+/* Style for our header texts
+* --------------------------------------- */
+body{
+	background:#4BBFC3;
+}
+h1{
+	font-size: 5em;
+	font-family: arial,helvetica;
+	color: #fff;
+	margin:0;
+	padding:0;
+}
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+	text-align:center;
+	background:#4BBFC3;
+}
+
+#menu {
+position: fixed;
+top: 0;
+left: 0;
+height: 40px;
+z-index: 70;
+width: 100%;
+padding: 0;
+margin: 0;
+}
+
+
+/* Fixed header and footer.
+* --------------------------------------- */
+#header, #footer{
+	position:fixed;
+	height: 50px;
+	display:block;
+	width: 100%;
+	background: #333;
+	z-index:9;
+	text-align:center;
+	color: #f2f2f2;
+}
+
+#header{
+	top:0px;
+}
+#footer{
+	bottom:0px;
+}
+.top-bar{
+	height:100%;
+}
+
+#myVideo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-size: 100% 100%;
+		background-color: black; /* in case the video doesn't fit the whole page*/
+		background-image: /* our video */;
+		background-position: center center;
+		background-size: contain;
+		object-fit: cover; /*cover video background */
+}
+#video-container{
+	bottom:7%;
+}
+
+#picture{
+	background-size: cover;
+}
+
+/* Defining each section background and styles
+* --------------------------------------- */
+.picture{
+	background-image: url(public/ship.jpg);
+	padding: 30% 0 0 0;
+}
